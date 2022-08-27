@@ -122,7 +122,15 @@ export default function Header({ theme, position }) {
                 </button>
               </li>
               <li className="ml-6">
-                <Link to="/cart">
+                <Link
+                  to="/cart"
+                  className={[
+                    "cart flex items-center justify-center w-8 h-8",
+                    theme === "white"
+                      ? "text-black md:fill-white"
+                      : "text-black md:text-black",
+                  ].join(" ")}
+                >
                   <IconCart />
                 </Link>
               </li>
