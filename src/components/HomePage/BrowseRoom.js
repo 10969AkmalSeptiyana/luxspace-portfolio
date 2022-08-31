@@ -107,7 +107,7 @@ export default function BrowseRoom() {
                 <div
                   key={item.id}
                   className={`relative card ${
-                    ratioClassName?.wrapper.default?.[item.ratio.defualt]
+                    ratioClassName?.wrapper.default?.[item.ratio.default]
                   } ${ratioClassName?.wrapper.md?.[item.ratio.md]}`}
                   style={{ height: index === 0 ? 180 : "auto" }}
                 >
