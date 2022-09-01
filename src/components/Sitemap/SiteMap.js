@@ -9,7 +9,7 @@ function SitemMapLinks({ isActive, setActive, children, title }) {
         <button
           className={[
             "absolute block md:hidden right-0 transform -translate-y-1/2 focus:outline-none transition duration-200 top-1/2",
-            isActive ? "rotate-0" : "rotate-1",
+            isActive ? "rotate-0" : "rotate-180",
           ].join(" ")}
           onClick={() => setActive(isActive)}
         >
