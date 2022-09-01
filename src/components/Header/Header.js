@@ -127,7 +127,7 @@ export default function Header({ theme, position }) {
                   className={[
                     "cart flex items-center justify-center w-8 h-8",
                     theme === "white"
-                      ? "text-black md:fill-white"
+                      ? "text-black md:text-white"
                       : "text-black md:text-black",
                   ].join(" ")}
                 >
