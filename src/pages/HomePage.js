@@ -1,10 +1,10 @@
-import Clients from "components/Clients";
-import Footer from "components/Footer/Footer";
-import Header from "components/Header/Header";
+import Clients from "components/HomePage/Clients";
+import Footer from "components/Footer";
+import Header from "components/Header";
 import BrowseRoom from "components/HomePage/BrowseRoom";
 import Hero from "components/HomePage/Hero";
 import JustArrived from "components/HomePage/JustArrived";
-import SiteMap from "components/Sitemap/SiteMap";
+import SiteMap from "components/SiteMap";
 
 import useModalDOM from "helpers/hooks/useModalDOM";
 import useScrollAnchor from "helpers/hooks/useScrollAnchor";

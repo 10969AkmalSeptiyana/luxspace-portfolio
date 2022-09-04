@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import Carousel from "components/Carousel";
+import Carousel from "components/ui/Carousel";
 
 import useAsync from "helpers/hooks/useAsync";
 import fetch from "helpers/fetch";
