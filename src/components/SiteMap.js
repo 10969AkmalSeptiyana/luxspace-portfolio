@@ -49,7 +49,7 @@ export default function SiteMap() {
       <div className="border-b border-gray-200 py-12 mt-16 px-4">
         <div className="flex justify-center mb-8">
           <img
-            src="images/logo.png"
+            src="/images/logo.png"
             alt="Luxspace | Fullfill your house with beautiful furniture"
           />
         </div>
