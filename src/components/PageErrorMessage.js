@@ -5,9 +5,9 @@ export default function PageErrorMessage({
   body = "Looks like this page not found",
 }) {
   return (
-    <section className="mt-28">
-      <div className="container mx-auto min-h-screen">
-        <div className="flex flec-col items-center justify-center">
+    <section>
+      <div className="container mx-auto">
+        <div className="flex flex-col items-center justify-center min-h-screen">
           <div className="w-full md:w-4/12 text-center">
             <h2 className="text-3xl font-semibold mb-6">{title}</h2>
             <p className="text-lg mb-12">{body}</p>
