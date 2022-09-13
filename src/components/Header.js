@@ -1,11 +1,26 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { useGlobalContext } from "helpers/hooks/useGlobalContext";
+
 import { ReactComponent as IconCart } from "assets/images/icon-cart.svg";
 
 export default function Header({ theme, position }) {
   const [toggleMainMenu, setToggleMainMenu] = useState(false);
   const [isCartChanged, setCartChanged] = useState(false);
+  const { state } = useGlobalContext();
+
+  const prevCart = useRef(state?.cart || {});
+
+  useLayoutEffect(() => {
+    if (prevCart.current !== state.cart) {
+      prevCart.current = state?.cart || {};
+      setCartChanged(true);
+      setTimeout(() => {
+        setCartChanged(false);
+      }, 550);
+    }
+  }, [state.cart]);
 
   return (
     <header className={[position, "w-full z-40 px-4"].join(" ")}>
@@ -129,6 +144,10 @@ export default function Header({ theme, position }) {
                     theme === "white"
                       ? "text-black md:text-white"
                       : "text-black md:text-black",
+                    state.cart && Object.keys(state.cart).length > 0
+                      ? "cart-filled"
+                      : "",
+                    isCartChanged ? "animate-bounce" : "",
                   ].join(" ")}
                 >
                   <IconCart />

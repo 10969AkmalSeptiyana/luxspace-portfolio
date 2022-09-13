@@ -5,16 +5,11 @@ import BrowseRoom from "components/HomePage/BrowseRoom";
 import Hero from "components/HomePage/Hero";
 import JustArrived from "components/HomePage/JustArrived";
 import SiteMap from "components/SiteMap";
-
-import useModalDOM from "helpers/hooks/useModalDOM";
-import useScrollAnchor from "helpers/hooks/useScrollAnchor";
+import Document from "components/Document";
 
 export default function HomePage() {
-  useModalDOM();
-  useScrollAnchor();
-
   return (
-    <>
+    <Document>
       <Header theme="white" position="absolute" />
       <Hero />
       <BrowseRoom />
@@ -22,6 +17,6 @@ export default function HomePage() {
       <Clients />
       <SiteMap />
       <Footer />
-    </>
+    </Document>
   );
 }
